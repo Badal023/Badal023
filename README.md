@@ -20,7 +20,7 @@ Third-year IT student at PCCOE Pune. I build AI agents and the data pipelines be
 
 I build systems end-to-end — from the data pipeline that feeds the model to the API another engineer will read next quarter. Most of my work sits at the intersection of agentic AI, data engineering, and the backend glue that keeps both honest.
 
-I gravitate toward problems where the answer isn't a paper — somewhere between research ideation and production shipping, where the work is forcing both sides to compromise honestly. That's what keeps pulling me into multi-agent decision systems, applied ML pipelines, and integration debugging that someone else didn't finish.
+I gravitate toward problems between research ideation and production shipping — multi-agent decision systems, applied ML pipelines, and integration debugging someone else didn't finish.
 
 > [!TIP]
 > Open to **summer 2026 internships** in data engineering, ML platform, or research engineering — anywhere I can ship code other engineers actually maintain.
@@ -29,9 +29,9 @@ I gravitate toward problems where the answer isn't a paper — somewhere between
 
 ### 🔭 Currently
 
-- 🏗️ **Building — DecisionDNA**, a multi-agent decision-intelligence benchmark for evaluating how agents reason under conflicting objectives, not single tasks.
-- 🔁 **Iterating on — DecisionDNA's eval set**, specifically the cases where agents over-commit to early subgoals, and the failure modes that don't show up in single-task benchmarks.
-- 📚 **Reading — agent-evaluation papers from the last six months on arXiv**, plus re-reading the *Designing Data-Intensive Applications* chapters on stream processing and consistency through the lens of multi-agent orchestration.
+- 🏗️ **Building — DecisionDNA**, a multi-agent decision-intelligence benchmark for agents reasoning under conflicting objectives, not single tasks.
+- 🔁 **Iterating on — DecisionDNA's eval set**, targeting cases where agents over-commit to early subgoals — failure modes single-task benchmarks miss.
+- 📚 **Reading — recent agent-evaluation papers on arXiv**, plus *Designing Data-Intensive Applications* (stream processing, consistency) through the lens of multi-agent orchestration.
 
 ---
 
@@ -51,9 +51,9 @@ I gravitate toward problems where the answer isn't a paper — somewhere between
 > [!NOTE]
 > Things I keep turning over in my notes — partly because they shape what I build next, partly because they show where the field still has open seams.
 
-1. **How do you evaluate a multi-agent system when there is no single ground-truth answer?** Standard eval assumes one right answer; multi-step decision-making is full of tradeoffs, and the right metric depends on what the agent system is actually for. DecisionDNA forces this question every time I add a case.
-2. **How do you keep a fairness or robustness intervention from quietly breaking when the upstream training distribution drifts?** Static interventions decay; dynamic ones need their own monitoring loop. I've got a half-written reproduction of a subgroup-robustness baseline that breaks the moment I shift the training distribution, and I haven't seen a writeup that handles both.
-3. **When does an agent orchestration layer earn observability, and what is the *first* useful signal?** Freshness-per-source doesn't translate from ETL the way I assumed it would. I'm currently leaning on something like *cost-per-successful-tool-call*, but I want to argue against that in writing before I commit to it as the dashboard's first metric.
+1. **How do you evaluate a multi-agent system with no single ground-truth answer?** Standard eval assumes one right answer; the right metric depends on what the system is actually for. DecisionDNA forces this every time I add a case.
+2. **How does a fairness/robustness intervention avoid quietly breaking as the training distribution drifts?** Static interventions decay. My subgroup-robustness reproduction breaks the moment I shift the distribution — haven't found a writeup that solves both.
+3. **What's the *first* useful observability signal for an agent orchestration layer?** ETL's "freshness-per-source" doesn't translate. Leaning toward *cost-per-successful-tool-call*, but still arguing myself out of it before committing.
 
 ---
 
@@ -126,9 +126,9 @@ Tools I have actually shipped code on — not ones I have only read about.
 <details>
 <summary>📘 Selected Learning</summary>
 
-- **DataCamp — Data Engineer Associate** — hands-on track covering ETL pipelines, warehouse modelling, and production data-quality patterns.
-- **DataCamp — Data Engineering Track** — broader track covering batch + streaming ingestion, orchestration, and pipeline reliability.
-- **DeepLearning.AI — Machine Learning Specialization** — Andrew Ng's three-course sequence; re-grounded the applied ML side of the project work.
+- **DataCamp — Data Engineer Associate** — ETL pipelines, warehouse modelling, production data-quality patterns.
+- **DataCamp — Data Engineering Track** — batch + streaming ingestion, orchestration, pipeline reliability.
+- **DeepLearning.AI — Machine Learning Specialization** — Andrew Ng's sequence; re-grounded the applied ML side of the work.
 
 </details>
 
@@ -160,12 +160,10 @@ For anyone who scrolled this far: reinforcement learning has nothing on this cat
 <details>
 <summary>🎨 How this README was built</summary>
 
-This page went through a repaint: same words, same structure, more color. Nothing in the sections above was rewritten — what changed is the shell around them.
-
-- Markdown rendered by GitHub; one Mermaid diagram for the parts I keep re-explaining in conversation.
-- Badges and icons pulled from shields.io / simple-icons, tinted to one muted purple-and-slate palette so the widgets don't fight the content.
-- Header, footer, and stats cards are generated on the fly (capsule-render, github-readme-stats, streak-stats) — nothing committed as a binary asset, easy to swap back.
-- If you read it with images disabled, the headings, tables, and lists still carry the whole story — you just lose the color.
+- Markdown rendered by GitHub; one Mermaid diagram for the part I keep re-explaining in conversation.
+- Badges/icons from shields.io / simple-icons, tinted to one muted purple-and-slate palette.
+- Header, footer, and stats cards generated on the fly (capsule-render, github-readme-stats, streak-stats) — no committed binary assets.
+- Images-off readers still get the full story from headings, tables, and lists.
 
 </details>
 
@@ -184,6 +182,8 @@ Open to internships, OSS collaboration, and conversations about agents and pipel
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6E6A86,100:907AA9&height=150&section=footer&reversal=true&animation=fadeIn&text=Thanks%20for%20scrolling%20all%20the%20way%20down&fontSize=20&fontColor=FAFAFC&fontAlignY=80&fontFamily=Inter" width="100%"/>
 
 </div>
+
+<img data-importer="snake" src="https://raw.githubusercontent.com/badal023/badal023/snake-output/snake.svg" alt="Snake animation" />
 
 <!-- badge reference definitions — invisible, keeps the tables above readable -->
 [Python]: https://img.shields.io/badge/Python-907AA9?style=flat-square&logo=python&logoColor=white
