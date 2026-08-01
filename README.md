@@ -183,8 +183,6 @@ Open to internships, OSS collaboration, and conversations about agents and pipel
 
 </div>
 
-<img data-importer="snake" src="https://raw.githubusercontent.com/badal023/badal023/snake-output/snake.svg" alt="Snake animation" />
-
 <!-- badge reference definitions — invisible, keeps the tables above readable -->
 [Python]: https://img.shields.io/badge/Python-907AA9?style=flat-square&logo=python&logoColor=white
 [TypeScript]: https://img.shields.io/badge/TypeScript-907AA9?style=flat-square&logo=typescript&logoColor=white
